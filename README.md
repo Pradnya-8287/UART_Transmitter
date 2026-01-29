@@ -38,10 +38,17 @@ By modifying this parameter, the design can be adapted to different baud rates w
 - Known data is transmitted through the UART transmitter
 - Serialized output is looped back into the receiver
 - GTKWave is used to inspect: FSM transitions, Bit timing, Serial data framing, Correct byte reconstruction
-### Tools Used
-- Verilog HDL
-- Icarus Verilog
-- GTKWave
-- Visual Studio Code
+## How to Run the Simulation
+Follow the steps below to compile and simulate the UART transmitter and receiver.
+
+```bash
+
+iverilog transmitter.v receiver.v testbench.v
+vvp a.out
+gtkwave testbench.vcd
+
+```
+## Waveform Verification (GTKWave)
+
 
 
