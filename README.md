@@ -50,7 +50,7 @@ gtkwave testbench.vcd
 ```
 ## Waveform Verification (GTKWave)
 ### Transmitter operation 
-![UART Transmitter Waveform](waveforms/Tx_operation.png)
+![UART Transmitter Waveform](waveform/Tx_operation.png)
 
 
 
