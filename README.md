@@ -51,6 +51,10 @@ gtkwave testbench.vcd
 ## Waveform Verification (GTKWave)
 ### Transmitter operation 
 ![UART Transmitter Waveform](waveform/Tx_operation.png)
+### Receiver operation
+![UART Receiver Waveform](waveform/Rx_operation.png)
+### End-to-End UART Communication
+![UART End-to-End Waveform](waveform/End_to_End_communication.png)
 
 
 
