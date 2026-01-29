@@ -6,8 +6,8 @@ UART is an asynchronous serial communication protocol that transmits data one bi
 1. Start bit (logic 0)
 2. Data bits (LSB first)
 3. Stop bit (logic 1)
-# Description
-### 1) UART Transmitter
+# Design Description
+### UART Transmitter
 The transmitter converts 8-bit parallel data into a serial stream using an FSM.
 **Key Signals:**
 - `i_DV` – Data valid input to start transmission
@@ -15,13 +15,13 @@ The transmitter converts 8-bit parallel data into a serial stream using an FSM.
 - `o_Serial_Data` – Serialized UART output
 - `o_Sig_Active` – Indicates transmitter is busy
 - `o_Sig_Done` – Indicates transmission completion
-### 2) UART Receiver
+### UART Receiver
 The receiver reconstructs serial data back into parallel form.
 **Key Signals:**
 - `i_Serial_Data` - UART serial input
 - `o_Byte` - Received 8-bit parallel data
 - `o_DV` - Data valid output pulse
-### 3) FSM (Finite State Machine)
+### FSM (Finite State Machine)
 **Transmitter and Receiver FSM States**
 - IDLE
 - START
@@ -30,12 +30,18 @@ The receiver reconstructs serial data back into parallel form.
 - REFRESH
 
 FSM-based control ensures deterministic timing and protocol correctness.
-### 4) Timing Parameter 
+### Timing Parameter 
 The parameter `FREQUENCY` defines the number of clock cycles per UART bit.
 By modifying this parameter, the design can be adapted to different baud rates without changing the core logic.
-### 5) Verification Strategy
+### Verification Strategy
 - A self-checking Verilog testbench was used.
 - Known data is transmitted through the UART transmitter
 - Serialized output is looped back into the receiver
 - GTKWave is used to inspect: FSM transitions, Bit timing, Serial data framing, Correct byte reconstruction
+### Tools Used
+- Verilog HDL
+- Icarus Verilog
+- GTKWave
+- Visual Studio Code
+
 
