@@ -6,3 +6,5 @@ UART is an asynchronous serial communication protocol that transmits data one bi
 1. Start bit (logic 0)
 2. Data bits (LSB first)
 3. Stop bit (logic 1)
+# Description
+## UART Transmitter
