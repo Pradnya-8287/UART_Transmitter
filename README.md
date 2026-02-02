@@ -1,4 +1,4 @@
-# UART_Transmitter
+# UART Transmitter and Receiver
 A synthesizable FSM-based UART TX/RX implemented in Verilog and verified using a self-checking testbench and GTKWave.
 This project implements a UART (Universal Asynchronous Receiver Transmitter) using Verilog RTL. Both the transmitter and receiver are designed using finite state machines (FSMs) and verified through a self-checking testbench with waveform analysis using GTKWave.
 ## What is UART?
